@@ -3,11 +3,11 @@ import express from 'express';
 
 import rootRoutes from './routes/rootRoutes.js';
 
-const PORT = process.env.PORT;
+const PORT: string = process.env.PORT || '3000';
 
 export const app = express();
 app.use('/', rootRoutes);
 
 app.listen(PORT, () => {
-    console.log(`Server listening on ${PORT}`);
+    console.log(`Server listening on localhost:${PORT}`);
 });
