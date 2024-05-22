@@ -10,6 +10,20 @@ module.exports = {
     module:{
         rules: [
             {
+                test: /\.tsx?$/,
+                use: {
+                    loader: 'ts-loader',
+                    options: {
+                        configFile: 'tsconfig.fe.json'
+                    }
+                },
+                exclude: /node_modules/,
+            },
+            {
+                test: /\.s[ac]ss$/i,
+                use: ["style-loader", "css-loader", "sass-loader"],
+            },
+            {
                 test: /\.(jsx|js)$/,
                 exclude: /node_modules/,
                 use: {
@@ -30,6 +44,6 @@ module.exports = {
         liveReload: true
     },
     resolve: {
-        extensions: ['.js','.jsx'] 
+        extensions: ['.tsx', '.ts','.js'] 
     },
 };
