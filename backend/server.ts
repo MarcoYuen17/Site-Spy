@@ -3,7 +3,7 @@ import express from 'express';
 
 import rootRoutes from './routes/rootRoutes.js';
 
-const PORT: string = process.env.PORT || '3000';
+const PORT: string = process.env.PORT || '8001';
 
 export const app = express();
 app.use('/', rootRoutes);
