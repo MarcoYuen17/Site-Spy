@@ -6,7 +6,7 @@ interface AddressBarProps {
 }
 
 export const AddressBar: React.FC<AddressBarProps> = (props) => {
-    const [address, setAddress] = useState(props.currentAddress);
+    const [address, setAddress] = useState<string>(props.currentAddress);
 
     const handleUpdateAddressInput = (e: BaseSyntheticEvent) => {
         const newAddress = e.target.value || '';

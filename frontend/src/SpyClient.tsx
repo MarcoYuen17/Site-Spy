@@ -5,7 +5,7 @@ import { Options } from './Options';
 import { AddressBar } from './AddressBar';
 
 export const SpyClient: React.FC = () => {
-    const [siteURL, setSiteURL] = useState('');
+    const [siteURL, setSiteURL] = useState<string>('');
 
     const handleChangeSiteURL = (newSiteURL: string) => {
         setSiteURL(newSiteURL);
