@@ -1,13 +1,7 @@
 import React, { useState } from "react";
 import { AddressBar } from "./AddressBar";
 
-enum Operator {
-    '>',
-    '>=',
-    '==',
-    '<=',
-    '<'
-}
+type Operator = '>' | '>=' | '==' | '<=' | '<';
 
 interface OptionsProps {
     currentAddress: string;
@@ -18,7 +12,7 @@ export const Options: React.FC<OptionsProps> = (props) => {
     const [isFullPage, setIsFullPage] = useState<boolean>(true);
     const [frequency, setfrequency] = useState<number>(30);
     const [name, setName] = useState<string>(props.currentAddress);
-    const [operation, setOperation] = useState<Operator>(Operator["=="]);
+    const [operation, setOperation] = useState<Operator>('==');
     const [argument, setArgument] = useState<string | number>('');
 
     return (
