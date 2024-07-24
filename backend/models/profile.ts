@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
 
-interface IProfile {
+export interface IProfile {
   username: string;
   name: string;
   phoneNum: string;
