@@ -29,7 +29,7 @@ export async function login(username: string, password: string) {
   }
 
   if (bcrypt.compareSync(password, account.password)) {
-    //
+    // TODO
   } else {
     throw new Error('INVALID_CREDENTIALS');
   }
